@@ -1,11 +1,12 @@
-**Bem-vindo ao wiki do llabs_hml_account!**
+**Bem-vindo ao wiki do llabs_s3backend!**
 
-Esse repositório llabs_hml_account cria contas abaixo da conta da organização root. Muito util na criação de contas peer, html, dev dentre outras.
+Esse repositório llabs_s3backend ajuda no salvamento do estado do terraform e configurações de conta para os usuários colaborarem entre si com o uso do terraform.
 
 1 - Pre-requisito 
 * A conta da organização já tem que estar criada na AWS.
 
-Como a primeira conta da organização criada via GUI esse repositório serve para criar novas contas.
+Como a primeira conta da organização criada via GUI esse repositório serve para criar o bucket onde iremos salvar esses dados.
+Porem o lab já se encontra criado, então seguiremos com a parametrizado e configuração do sistema operacional
 Mas primeiro vamos fazer alguns ajustes:
 
 2 - Uso do repositório:
@@ -31,10 +32,20 @@ Faça o download do terraform no endereço "Terraform":https://developer.hashico
 * Abra o Vscode e efetue login VsCode para clone e versionamento do código.
 <img width="333" alt="image" src="https://github.com/user-attachments/assets/fce31344-3924-4d54-b046-335313ad1c94">
 
+4 - Clone do repositoria via git.
+
 * Para clonar o repositório, crie uma pasta no seu SO e execute o comando no terminal a partir da pasta que você criou.
 Digite: <pre><code>git clone https://github.com/gudesantana/llabs_s3backend.git</code></pre>
 
-4 - Configurando o terraform, criando workspaces
+* Execute o comando no seu terminal.
+<pre><code>git pull</code></pre>
+Nesse momento o repositório deverá ser baixado para trabalho no seu repositório local
+
+Nosso projeto já se encontra criado, porem mesmo assim segue ajuda para externa-lo a outros projetos.
+
+**Para os passos abaixo, somente se for criar novos ambientes.**
+
+5 - Configurando o terraform, criando workspaces
 
 No repositório terraform, tera um arquivo chamado <pre><code>version.tf</code></pre>. Edite o arquivo e comente as seguintes linhas:
 
@@ -93,7 +104,7 @@ Após a criação do Workspace ele já redireciona para o workspace criado. Mesm
 <pre><code>terraform workspace list</code></pre>
 _Obs.: O workspace default pode ser utilizado, mas por melhores praticas não iremos utilizar nesse momento._
 
-5 - Criação da infraestrutura AWS com o terraform
+6 - Criação da infraestrutura AWS com o terraform
 
 * Criação da nova conta na organização, neste caso a conta llabs-hml.
 
@@ -122,7 +133,7 @@ valide a criação dos recursos na organização:
 Acesse o console da aws, clique no nome do seu user no canto direito superior e vá em organização. Deverá aparecer a seguinte conta criada conforme imagem.
 <img width="478" alt="image" src="https://github.com/user-attachments/assets/32b40a92-bf93-463d-8455-3c35683cdb4c">
 
-6 - Redirecionando o terraform.state.
+7 - Redirecionando o terraform.state.
 Agora iremos redirecionar o terraform state para salvar o estado no bucket criado no repositorio llabs_s3backend. 
 
 * Comente novamente o arquivo <pre><code>version.tf</code></pre>. Edite o arquivo e comente as seguintes linhas deixando exatamente conforme o exemplo abaixo:
@@ -154,7 +165,7 @@ Após digitar "Yes". Você tera o seguinte retorno informando que o estado do se
 <img width="451" alt="image" src="https://github.com/user-attachments/assets/da3298fa-65af-4b65-b858-49799bfec4a6">
 _Obs: Esta imagem foi tirada de outro repositório de exemplo, porem segue as mesmas regras!_
 
-7 - Fim
+8 - Fim
 
 Se você chegou até aqui, todos os passos foram configurados e recursos implementados corretamente.
 Vamos para o próximo repositório para parametrização das contas PRD e HML.
