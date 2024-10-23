@@ -35,7 +35,7 @@ Faça o download do terraform no endereço "Terraform":https://developer.hashico
 4 - Clone do repositoria via git.
 
 * Para clonar o repositório, crie uma pasta no seu SO e execute o comando no terminal a partir da pasta que você criou.
-Digite: <pre><code>git clone https://github.com/gudesantana/llabs_s3backend.git</code></pre>
+Digite: <pre><code>git clone https://github.com/gudesantana/llabs_hml_account.git</code></pre>
 
 * Execute o comando no seu terminal.
 <pre><code>git pull</code></pre>
