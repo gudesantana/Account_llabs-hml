@@ -1,6 +1,6 @@
-**Bem-vindo ao wiki do llabs_s3backend!**
+**Bem-vindo ao wiki do repositorio!**
 
-Esse repositório llabs_s3backend ajuda no salvamento do estado do terraform e configurações de conta para os usuários colaborarem entre si com o uso do terraform.
+Esse repositório ajuda no salvamento do estado do terraform e configurações de conta para os usuários colaborarem entre si com o uso do terraform.
 
 1 - Pre-requisito 
 * A conta da organização já tem que estar criada na AWS.
